@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+void maxmin(int a, int b, int *max, int *min)
+{
+    if(a > b)
+    {
+        *max = a;
+        *min = b;
+    }
+    else
+    {
+        *max = b;
+        *min = a;
+    }
+}
+
+int main()
+{
+    int a, b, max, min;
+
+    printf("Enter two numbers: ");
+    scanf("%d %d", &a, &b);
+
+    maxmin(a, b, &max, &min);
+
+    printf("Maximum = %d\n", max);
+    printf("Minimum = %d\n", min);
+
+    return 0;
+}
